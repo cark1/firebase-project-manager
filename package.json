@@ -7,11 +7,19 @@
     "react-dom": "^16.6.0",
     "react-scripts": "2.1.1"
   },
+  "devDependencies": {
+    "electron": "^1.6.11",
+    "electron-packager": "^12.1.2"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "electron-dev": "ELECTRON_START_URL=http://localhost:3000 electron .",
+    "electron-prod": "electron .",
+    "electron-mac": "electron-packager . firebase-project-manager --prune=true",
+    "electron-win": "electron-packager . firebase-project-manager --platform=win32 --prune=true"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -21,5 +29,6 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "main": "main.js"
 }
